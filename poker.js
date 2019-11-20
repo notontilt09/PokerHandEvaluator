@@ -214,6 +214,8 @@ const findBestHand = cards => {
   return handMap[handValue];
 };
 
+
+// code could likely be optimized, the straight finding algorithm would be slow for large inputs, but still solving 10k hands in < 1 second
 const test10000 = generateHands(10000);
 test10000.forEach(hand => console.log(findBestHand(hand)));
 
