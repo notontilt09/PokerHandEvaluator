@@ -52,6 +52,7 @@ const generateHands = numberOfHands => {
   for (let i = 0; i < numberOfHands; i++) {
     let deck = new Deck();
     deck.shuffle();
+    // get a random amount of cards (5-40 inclusive) of cards off the top of the deck
     deck.deck = deck.deck.slice(0, Math.floor(Math.random() * (41 - 5) + 5))
     hands.push(deck.deck);
   }
